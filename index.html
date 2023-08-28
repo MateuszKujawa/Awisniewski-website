@@ -6,7 +6,20 @@
 
     <!-- Tailwind CSS -->
     <link rel="stylesheet" href="/dist/output.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.15/dist/tailwind.min.css" rel="stylesheet">
     <style>
+        header{
+            background-image: url(/images/background_white.webp);
+        }
+
+        li a{
+            transition: all .3s ease;
+        }
+
+        li a:hover{
+            background-color: rgb(253 224 71);
+            border-radius: 5px;
+        }
         @media (max-width: 767px) {
             .mobile-menu {
                 transform: translateY(-100%);
@@ -16,52 +29,114 @@
                 transform: translateY(0);
             }
         }
+
+        .sticky-nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
     </style>
-    <title>A Wiśniewski - GK</title>
+
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+
+    <title>AWBK</title>
 </head>
 <body class="font-primary">
     <!-- Navigation section -->
+    <header class="w-full h-screen bg-cover bg-no-repeat">
+        <nav class="bg-white shadow-md p-4 flex justify-between items-center sticky-nav">
+            <div class="ml-12 ">
+                <span class="text-3xl font-bold tracking-wider">AWBK</span>
+              </div>
+              <div class="mr-36 md:mr-12">
+                <ul class="hidden md:flex space-x-2">
+                  <li><a href="#" class="text-neutral-900 font-semibold tracking-wide p-3 text-lg">Strona główna</a></li>
+                  <li><a href="#" class="text-neutral-900 font-semibold tracking-wide p-3 text-lg">O mnie</a></li>
+                  <li><a href="#" class="text-neutral-900 font-semibold tracking-wide p-3 text-lg">Projekty</a></li>
+                  <li><a href="#" class="text-neutral-900 font-semibold tracking-wide p-3 text-lg">Kontakt</a></li>
+                </ul>
+              </div>
     
-    <nav class="bg-blue-400 p-4 flex items-center justify-between">
-        <div class="flex items-center">
-            <span class="text-neutral-900 text-3xl font-semibold">NazwaFirmy</span>
-        </div>
-
-        <ul class="hidden md:flex space-x-6 pr-36">
-            <li>
-                <a href="#" class="text-neutral-900 text-sm font-semibold tracking-wider">STRONA GŁÓWNA</a>
-            </li>
-            <li>
-                <a href="#" class="text-neutral-900 text-sm font-semibold tracking-wider">O MNIE</a>
-            </li>
-            <li>
-                <a href="#" class="text-neutral-900 text-sm font-semibold tracking-wider">PROJEKTY</a>
-            </li>
-            <li>
-                <a href="#" class="text-neutral-900 text-sm font-semibold tracking-wider">KONTAKT</a>
-            </li>
-        </ul>
-
-        <div class="md:hidden relative">
-            <button id="mobileMenuButton" class="text-neutral-900">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                </svg>
-            </button>
-            <div id="mobileMenu" class="mobile-menu fixed inset-0 bg-white text-center">
-                <button id="closeMobileMenu" class="absolute top-4 right-4 text-neutral-900 hover:text-gray-700">
+            
+    
+            <div class="md:hidden relative">
+                <button id="mobileMenuButton" class="text-neutral-900">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                     </svg>
                 </button>
-                <a href="#" class="block px-4 py-2 text-neutral-900">Home</a>
-                <a href="#" class="block px-4 py-2 text-neutral-900">About</a>
-                <a href="#" class="block px-4 py-2 text-neutral-900">Services</a>
-                <a href="#" class="block px-4 py-2 text-neutral-900">Contact</a>
+                <div id="mobileMenu" class="mobile-menu fixed inset-0 bg-white text-center">
+
+                    <button id="closeMobileMenu" class="absolute top-4 right-4 text-neutral-900 hover:text-gray-700">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                    </button>
+
+                    <a href="#" class="block px-4 py-2 text-neutral-900">Home</a>
+                    <a href="#" class="block px-4 py-2 text-neutral-900">About</a>
+                    <a href="#" class="block px-4 py-2 text-neutral-900">Services</a>
+                    <a href="#" class="block px-4 py-2 text-neutral-900">Contact</a>
+                </div>
+            </div>
+        </nav>
+
+
+        <!-- Title -->
+        <div class="h-screen flex items-center justify-center pb-20 text-neutral-900">
+            <div class="text-center justify-center">
+                <h2 class="text-2xl font-bold mb-2">Slogan firmy</h2>
+                <h1 class="text-6xl font-bold mb-2">Główny tytuł</h1>
+                <a href="#">
+                    <button class="btn border-2 border-gray-900 py-3 px-8 text-sm text-bold font-bold mt-5 mb-5 transition ease-in-out hover:bg-yellow-300 duration-300">Przejdź dalej</button>
+                </a>
             </div>
         </div>
-    </nav>
+    </header>
 
+
+
+    <main class="bg-white text-neutral-900 justify-center items-center h-screen">
+        <div class="items-center text-center pt-28">
+            <h1 class="text-6xl font-bold">O MNIE</h1>
+            <h3 class="text-lg font-bold">KIM JESTEM & CZYM SIĘ ZAJMUJĘ</h3>
+        </div>
+
+
+        <div class="flex justify-center items-center h-fit mt-20">
+            <div class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 text-center">
+
+                <div class="flex flex-col items-center">
+                  <i class="fa-solid fa-pen text-white text-3xl rounded-full bg-yellow-300 p-5 mb-5"></i>
+                  <h1 class="text-xl font-bold">Tytuł 1</h1>
+                  <p class="text-gray-600">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eligendi minus ab nostrum velit voluptate ipsum non facere eveniet magnam amet?
+                  </p>
+                </div>
+                
+                <div class="flex flex-col items-center">
+                    <i class="fa-solid fa-pen text-white text-3xl rounded-full bg-yellow-300 p-5 mb-5"></i>
+                    <h1 class="text-xl font-bold">Tytuł 1</h1>
+                    <p class="text-gray-600">
+                      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eligendi minus ab nostrum velit voluptate ipsum non facere eveniet magnam amet?
+                    </p>
+                </div>
+                
+                <div class="flex flex-col items-center">
+                    <i class="fa-solid fa-pen text-white text-3xl rounded-full bg-yellow-300 p-5 mb-5"></i>
+                    <h1 class="text-xl font-bold">Tytuł 1</h1>
+                    <p class="text-gray-600">
+                      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eligendi minus ab nostrum velit voluptate ipsum non facere eveniet magnam amet?
+                    </p>
+                </div>
+            </div>
+        </div>
+        
+    </main>
+
+
+    <script src="https://kit.fontawesome.com/3fd4863eda.js" crossorigin="anonymous"></script>
     <script>
         const mobileMenuButton = document.getElementById('mobileMenuButton');
         const mobileMenu = document.getElementById('mobileMenu');

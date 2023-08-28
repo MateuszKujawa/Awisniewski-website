@@ -1,0 +1,12 @@
+/* *{
+    margin: 0;
+    padding: 0;
+}
+
+li a{
+    transition: background-color .3s ease;
+}
+
+li a:hover{
+    background-color: rgb(252 211 77);
+} */

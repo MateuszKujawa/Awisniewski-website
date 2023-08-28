@@ -5,6 +5,9 @@ module.exports = {
     extend: {
       fontFamily:{
         'primary': ['Montserrat']
+      },
+      backgroundImage:{
+        'headerBackground': "url(/img/background.jpg)",
       }
     },
   },
