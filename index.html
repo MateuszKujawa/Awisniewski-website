@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="/dist/output.css">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.15/dist/tailwind.min.css" rel="stylesheet">
     <style>
+        html{
+            scroll-behavior: smooth;
+        }
         header{
             background-image: url(/images/background_white.webp);
         }
@@ -36,10 +39,14 @@
             z-index: 1000;
         }
 
-        main{
+
+        footer{
+            background-color: rgb(28 25 23);
+        }
+        /* main{
             background: rgb(207,207,207);
             background: linear-gradient(0deg, rgba(207,207,207,1) 0%, rgba(206,206,206,0) 47%);
-        }
+        } */
     </style>
 
     <!-- Style CSS -->
@@ -47,7 +54,7 @@
 
     <title>AWBK | Adrian Wiśniewski</title>
 </head>
-<body class="font-primary">
+<body class="font-primary" id="top">
 
     <!-- Navigation bar -->
     <nav class="bg-white shadow-md p-4 flex justify-between items-center sticky-nav">
@@ -60,16 +67,16 @@
         <div class="mr-36 md:mr-12">
             <ul class="hidden md:flex space-x-2">
                 <li>
-                    <a href="#" class="text-neutral-900 font-semibold tracking-wide p-3 text-lg">Strona główna</a>
+                    <a href="index.html" class="text-neutral-900 font-semibold tracking-wide p-3 text-lg">Strona główna</a>
                 </li>
                 <li>
-                    <a href="#" class="text-neutral-900 font-semibold tracking-wide p-3 text-lg">O mnie</a>
+                    <a href="#aboutMe" class="text-neutral-900 font-semibold tracking-wide p-3 text-lg">O mnie</a>
                 </li>
                 <li>
-                    <a href="#" class="text-neutral-900 font-semibold tracking-wide p-3 text-lg">Projekty</a>
+                    <a href="#projects" class="text-neutral-900 font-semibold tracking-wide p-3 text-lg">Projekty</a>
                 </li>
                 <li>
-                    <a href="#" class="text-neutral-900 font-semibold tracking-wide p-3 text-lg">Kontakt</a>
+                    <a href="#contact" class="text-neutral-900 font-semibold tracking-wide p-3 text-lg">Kontakt</a>
                 </li>
             </ul>
         </div>
@@ -101,14 +108,14 @@
     </nav>
 
     <!-- Header section -->
-    <header class="w-full h-screen bg-cover bg-no-repeat bg-fixed ">
+    <header class="w-full h-screen bg-cover bg-no-repeat bg-fixed">
 
         <!-- Title -->
         <div class="h-screen flex items-center justify-center pb-20 text-neutral-900">
             <div class="text-center justify-center">
                 <h2 class="text-2xl font-bold mb-2">Slogan firmy</h2>
                 <h1 class="text-6xl font-bold mb-2">Główny tytuł</h1>
-                <a href="#">
+                <a href="#aboutMe">
                     <button class="btn border-2 border-gray-900 py-3 px-8 text-sm text-bold font-bold mt-5 mb-5 transition ease-in-out hover:bg-yellow-300 duration-300">Przejdź dalej</button>
                 </a>
             </div>
@@ -119,53 +126,122 @@
     <!-- Main section -->
     <main class="bg-white text-neutral-900 justify-center items-center ">
         <!-- About me -->
-        <div class="items-center text-center pt-28">
+        <div class="items-center text-center pt-28" id="aboutMe">
             <h1 class="text-6xl font-bold">O MNIE</h1>
-            <h3 class="text-lg font-bold pt-5">KIM JESTEM & CZYM SIĘ ZAJMUJĘ</h3>
+            <h3 class="text-lg font-bold pt-5">CZYM SIĘ ZAJMUJĘ</h3>
         </div>
 
         <!-- My skills -->
-        <div class="flex justify-center items-center h-fit mt-20 p-10">
-            <div class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-2 text-center">
+        <div class="mt-16 min-h-screen" id="mySkills">
+            <div class="max-w-screen-lg mx-auto p-4 space-y-4 md:flex md:space-y-0 md:space-x-4">
+                <div class="shadow-lg bg-white rounded-lg w-full md:w-1/2 p-4 flex flex-col items-center">
+                    <div class="flex items-center justify-center w-12 h-12 bg-yellow-400 rounded-full mb-2">
+                        <i class="fa-solid fa-pen text-white p-4"></i>
+                    </div>
+                    <div class="md:flex-grow text-center">
+                        <h1 class="text-xl font-bold mt-2">Projektowanie</h1>
+                        <div class="text-neutral-900 mt-10">Opis projektowania, realizacji itd</div>
+                    </div>
+                </div>
 
-                <div class="flex flex-col items-center p-10 shadow-lg bg-white">
-                  <i class="fa-solid fa-pen text-white text-3xl rounded-full bg-yellow-300 p-5 mb-5"></i>
-                  <h1 class="text-xl font-bold">Projektowanie</h1>
-                  <p class="text-gray-600 text-left pt-5">
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eligendi minus ab nostrum velit voluptate ipsum non facere eveniet magnam amet?
-                  </p>
+                <div class="shadow-lg bg-white rounded-lg w-full md:w-1/2 p-4 flex flex-col items-center">
+                    <div class="flex items-center justify-center w-12 h-12 bg-yellow-400 rounded-full mb-2">
+                        <i class="fa-regular fa-pen-to-square text-white p-4"></i>
+                    </div>
+                    <div class="md:flex-grow text-center">
+                        <h1 class="text-xl font-bold mt-2">Analiza i wkonanie dokumentacji</h1>
+                        <div class="text-neutral-900 mt-3">
+                            <p>Opis przedstawiający na czym polega proces analizy i wykonania dokumentacji lub coś innego.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="shadow-lg bg-white rounded-lg w-full md:w-1/2 p-4 flex flex-col items-center">
+                    <div class="flex items-center justify-center w-12 h-12 bg-yellow-400 rounded-full mb-2">
+                        <i class="fa-solid fa-list-check text-white p-4"></i>
+                    </div>
+                    <div class="md:flex-grow text-center">
+                        <h1 class="text-xl font-bold mt-2">Wykonastwo</h1>
+                        <div class="text-neutral-900 mt-8 text-left list-none">
+                            <li class="p-2">- Maszyn przemysłowych oraz rolniczych.</li>
+                            <li class="p-2">- Konstrukcji stalowych oraz drewnianych.</li>
+                            <li class="p-2">- Zabudów specjalnych pojazdów.</li>
+                            <li class="p-2">- Mebli.</li>
+                            <li class="p-2">- Spawanie stali nierdzewnych oraz aluminium.</li>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+         <!-- My Project's -->
+
+         <div class="items-center text-center mb-52" id="projects">
+            <h1 class="text-6xl font-bold py-4">MOJE PROJEKTY</h1>
+            <h3 class="text-lg font-bold pt-2 uppercase">Poniższe zdjęcia przedstawiają niektóre z moich projektów</h3>
+        </div>
+        <!-- Miejsce na zdjęcia -->
+
+
+        <!-- Contact -->
+        <div class="items-center text-center pt-10 w-full" id="contact">
+            <h1 class="text-5xl font-bold py-4">SKONTAKTUJ SIĘ ZE MNĄ</h1>
+            <h3 class="text-lg font-bold pt-2 uppercase">Zapraszam do kontaktu!</h3>
+        </div>
+        
+        <div class="flex justify-center items-center mt-20 mb-20">
+            <div class="max-w-screen-lg mx-auto p-4 space-y-4 text-neutral-900">
+                <div class="flex items-center space-x-4">
+                    <div class="w-8 h-8 flex items-center justify-center">
+                        <i class="fas fa-phone text-neutral-900"></i>
+                    </div>
+                    <p>Telefon: 123-456-789</p>
                 </div>
                 
-                <div class="flex flex-col items-center p-10 shadow-lg bg-white">
-                    <i class="fa-regular fa-pen-to-square text-white text-3xl rounded-full bg-yellow-300 p-5 mb-5"></i>
-                    <h1 class="text-xl font-bold">Analiza i wykonanie dokumentacji</h1>
-                    <p class="text-gray-600 text-left pt-5">
-                      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eligendi minus ab nostrum velit voluptate ipsum non facere eveniet magnam amet?
-                    </p>
+                <div class="flex items-center space-x-4">
+                    <div class="w-8 h-8 flex items-center justify-center">
+                        <i class="fas fa-envelope text-neutral-900"></i>
+                    </div>
+                    <p>Email: info@example.com</p>
                 </div>
                 
-                <div class="flex flex-col items-center p-10 shadow-lg bg-white">
-                    <i class="fa-solid fa-list-check text-white text-3xl rounded-full bg-yellow-300 p-5 mb-5"></i>
-                    <h1 class="text-xl font-bold">Wykonastwo</h1>
-                    <p class="text-gray-600 text-left pt-5">
-                      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eligendi minus ab nostrum velit voluptate ipsum non facere eveniet magnam amet?
-                    </p>
+                <div class="flex items-center space-x-4">
+                    <div class="w-8 h-8 flex items-center justify-center">
+                        <i class="fas fa-map-marker-alt text-neutral-900"></i>
+                    </div>
+                    <p>Adres: 123 Main St, City, Country</p>
+                </div>
+        
+                <div class="flex items-center space-x-4">
+                    <div class="w-8 h-8 flex items-center justify-center">
+                        <i class="fas fa-id-card text-neutral-900"></i>
+                    </div>
+                    <p>NIP: 123-456-7890</p>
+                </div>
+        
+                <div class="flex items-center space-x-4">
+                    <div class="w-8 h-8 flex items-center justify-center">
+                        <i class="fas fa-list-alt text-neutral-900"></i>
+                    </div>
+                    <p>REGON: 123456789</p>
                 </div>
             </div>
         </div>
         
-
-        <div class="items-center text-center pt-28">
-            <h1 class="text-5xl font-bold">CO WYKONUJĘ</h1>
-        </div>
-            <!-- <ul class="">
-                <li>Maszyny przemysłowe oraz rolnicze</li>
-                <li>Konstrukcję stalowe oraz drewniane</li>
-                <li>Zabudowy specjalnych pojazdów</li>
-                <li>Meble</li>
-                <li>Spawanie stali nierdzewnych oraz aluminium</li>
-            </ul> -->
     </main>
+
+    <footer class="flex h-20 w-full text-white text-center justify-between items-center bg-gray-900 px-5">
+        <p class="text-sm">&copy 2023 AWBK, All Rights Reserved. | Design: <a href="#top">mKujawaDev.pl</a></p>  
+        
+        <a href="#top">
+            <button class="bg-gray-600 hover:bg-gray-700 h-14 w-14">
+                <i class="fa-solid fa-chevron-up text-3xl pt-1"></i>
+            </button>
+        </a>
+    </footer>
+
+
 
 
     <script src="https://kit.fontawesome.com/3fd4863eda.js" crossorigin="anonymous"></script>
