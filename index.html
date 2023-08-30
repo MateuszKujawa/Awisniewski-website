@@ -1,82 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Meta tag's -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Tailwind CSS -->
     <link rel="stylesheet" href="/dist/output.css">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.15/dist/tailwind.min.css" rel="stylesheet">
-    <style>
-        html{
-            scroll-behavior: smooth;
-        }
-        header{
-            background-image: url(/images/background_white.webp);
-        }
 
-        li a{
-            transition: all .3s ease;
-        }
-
-        li a:hover{
-            background-color: rgb(253 224 71);
-            border-radius: 5px;
-        }
-        @media (max-width: 767px) {
-            .mobile-menu {
-                transform: translateY(-100%);
-                transition: transform 0.4s ease-in-out;
-            }
-            .open-menu {
-                transform: translateY(0);
-            }
-        }
-
-        .sticky-nav {
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-
-
-        footer{
-            background-color: rgb(28 25 23);
-        }
-        /* main{
-            background: rgb(207,207,207);
-            background: linear-gradient(0deg, rgba(207,207,207,1) 0%, rgba(206,206,206,0) 47%);
-        } */
-    </style>
+    <!-- Lightbox CSS -->
+    <link rel="stylesheet" href="/lightbox/css/lightbox.css">
 
     <!-- Style CSS -->
     <link rel="stylesheet" href="/css/style.css">
 
     <title>AWBK | Adrian Wiśniewski</title>
 </head>
+
+
+
 <body class="font-primary" id="top">
 
     <!-- Navigation bar -->
-    <nav class="bg-white shadow-md p-4 flex justify-between items-center sticky-nav">
+    <nav id="navbar" class="p-4 flex justify-between items-center sticky-nav">
 
         <!-- Logo name - left -->
         <div class="ml-12 ">
             <span class="text-3xl font-bold tracking-wider">AWBK</span>
         </div>
 
+        <!-- Nav elements -->
         <div class="mr-36 md:mr-12">
             <ul class="hidden md:flex space-x-2">
                 <li>
-                    <a href="index.html" class="text-neutral-900 font-semibold tracking-wide p-3 text-lg">Strona główna</a>
+                    <a href="index.html" class="text-neutral-900 font-semibold tracking-wide p-3 text-lg hover:bg-yellow-300 duration-300 rounded-sm">Strona główna</a>
                 </li>
                 <li>
-                    <a href="#aboutMe" class="text-neutral-900 font-semibold tracking-wide p-3 text-lg">O mnie</a>
+                    <a href="#aboutMe" class="text-neutral-900 font-semibold tracking-wide p-3 text-lg hover:bg-yellow-300 duration-300 rounded-sm">O mnie</a>
                 </li>
                 <li>
-                    <a href="#projects" class="text-neutral-900 font-semibold tracking-wide p-3 text-lg">Projekty</a>
+                    <a href="#projects" class="text-neutral-900 font-semibold tracking-wide p-3 text-lg hover:bg-yellow-300 duration-300 rounded-sm">Projekty</a>
                 </li>
                 <li>
-                    <a href="#contact" class="text-neutral-900 font-semibold tracking-wide p-3 text-lg">Kontakt</a>
+                    <a href="#contact" class="text-neutral-900 font-semibold tracking-wide p-3 text-lg hover:bg-yellow-300 duration-300 rounded-sm">Kontakt</a>
                 </li>
             </ul>
         </div>
@@ -100,23 +67,23 @@
                 </button>
 
                 <ul class="mt-52 text-2xl">
-                    <a href="index.html" id="mobileLink" class="block px-4 py-4 text-neutral-900 font-semibold border-b-2 hover:text-yellow-300 hover:border-yellow-300 duration-300">Strona główna</a>
-                    <a href="#aboutMe" id="mobileLink" class="block px-4 py-4 text-neutral-900 font-semibold border-b-2 hover:text-yellow-300 hover:border-yellow-300 duration-300">O mnie</a>
-                    <a href="#projects" id="mobileLink" class="block px-4 py-4 text-neutral-900 font-semibold border-b-2 hover:text-yellow-300 hover:border-yellow-300 duration-300">Projekty</a>
-                    <a href="#contact" id="mobileLink" class="block px-4 py-4 text-neutral-900 font-semibold border-b-2 hover:text-yellow-300 hover:border-yellow-300 duration-300">Kontakt</a>
+                    <a href="index.html" class="block px-4 py-4 text-neutral-900 font-semibold border-b-2 hover:text-yellow-300 hover:border-yellow-300 duration-300 active:text-yellow-300" onclick="closeMenu()">Strona główna</a>
+                    <a href="#aboutMe" class="block px-4 py-4 text-neutral-900 font-semibold border-b-2 hover:text-yellow-300 hover:border-yellow-300 duration-300 active:text-yellow-300" onclick="closeMenu()">O mnie</a>
+                    <a href="#projects" class="block px-4 py-4 text-neutral-900 font-semibold border-b-2 hover:text-yellow-300 hover:border-yellow-300 duration-300 active:text-yellow-300" onclick="closeMenu()">Projekty</a>
+                    <a href="#contact" class="block px-4 py-4 text-neutral-900 font-semibold border-b-2 hover:text-yellow-300 hover:border-yellow-300 duration-300 active:text-yellow-300" onclick="closeMenu()">Kontakt</a>
                 </ul>
             </div>
         </div>
     </nav>
 
     <!-- Header section -->
-    <header class="w-full h-screen bg-cover bg-no-repeat bg-fixed">
+    <header class="w-full h-screen bg-cover bg-no-repeat bg-fixed relative top-0 left-0">
 
         <!-- Title -->
         <div class="h-screen flex items-center justify-center pb-20 text-neutral-900">
             <div class="text-center justify-center">
                 <h2 class="text-2xl font-bold mb-2">Slogan firmy</h2>
-                <h1 class="text-6xl font-bold mb-2">Główny tytuł</h1>
+                <h1 class="text-6xl font-bold mb-2">Witamy na AWBK</h1>
                 <a href="#aboutMe">
                     <button class="btn border-2 border-gray-900 py-3 px-8 text-sm text-bold font-bold mt-5 mb-5 transition ease-in-out hover:bg-yellow-300 duration-300">Przejdź dalej</button>
                 </a>
@@ -126,17 +93,17 @@
 
 
     <!-- Main section -->
-    <main class="bg-white text-neutral-900 justify-center items-center ">
+    <main class="bg-gray-50 text-neutral-900 justify-center items-center ">
         <!-- About me -->
         <div class="items-center text-center pt-28" id="aboutMe">
             <h1 class="text-6xl font-bold">O MNIE</h1>
-            <h3 class="text-lg font-bold pt-5">CZYM SIĘ ZAJMUJĘ</h3>
+            <h3 class="text-xs font-bold pt-5">CZYM SIĘ ZAJMUJĘ</h3>
         </div>
 
         <!-- My skills -->
-        <div class="mt-16 min-h-screen" id="mySkills">
+        <div class="mt-16 mb-72" id="mySkills">
             <div class="max-w-screen-lg mx-auto p-4 space-y-4 md:flex md:space-y-0 md:space-x-4">
-                <div class="shadow-lg rounded-lg w-full md:w-1/2 p-4 flex flex-col items-center bg-gray-100">
+                <div class="shadow-lg rounded-lg w-full md:w-1/2 p-4 flex flex-col items-center bg-gray-100 border-2 border-neutral-950 ">
                     <div class="flex items-center justify-center w-12 h-12 bg-yellow-400 rounded-full mb-2">
                         <i class="fa-solid fa-pen text-white p-4"></i>
                     </div>
@@ -146,7 +113,7 @@
                     </div>
                 </div>
 
-                <div class="shadow-lg rounded-lg w-full md:w-1/2 p-4 flex flex-col items-center bg-gray-100">
+                <div class="shadow-lg rounded-lg w-full md:w-1/2 p-4 flex flex-col items-center bg-gray-100 border-2 border-neutral-950 ">
                     <div class="flex items-center justify-center w-12 h-12 bg-yellow-400 rounded-full mb-2">
                         <i class="fa-regular fa-pen-to-square text-white p-4"></i>
                     </div>
@@ -158,7 +125,7 @@
                     </div>
                 </div>
 
-                <div class="shadow-lg rounded-lg w-full md:w-1/2 p-4 flex flex-col items-center bg-gray-100">
+                <div class="shadow-lg rounded-lg w-full md:w-1/2 p-4 flex flex-col items-center bg-gray-100 border-2 border-neutral-950 ">
                     <div class="flex items-center justify-center w-12 h-12 bg-yellow-400 rounded-full mb-2">
                         <i class="fa-solid fa-list-check text-white p-4"></i>
                     </div>
@@ -179,59 +146,75 @@
 
          <!-- My Project's -->
 
-         <div class="items-center text-center mb-52" id="projects">
-            <h1 class="text-6xl font-bold py-4">MOJE PROJEKTY</h1>
-            <h3 class="text-lg font-bold pt-2 uppercase">Poniższe zdjęcia przedstawiają niektóre z moich projektów</h3>
-        </div>
-        <!-- Miejsce na zdjęcia -->
+         <div id="projects" class="h-28"></div>
+         <div class="items-center text-center mb-72">
+            <h1 class="text-6xl font-bold py-4" >MOJE PROJEKTY</h1>
+            <h3 class="text-xs font-bold pt-2 uppercase">Poniższe zdjęcia przedstawiają niektóre z moich projektów</h3>
 
+            <div class="w-full flex justify-center space-x-4 mt-20 md\:flex-col">
+                <a href="galery/dokumentacja2d.webp" data-lightbox="galery">
+                    <img src="/galery/dokumentacja2d.webp" alt="zdjęcie dokumentacji 2d" class="">
+                </a>
+                <a href="/galery/analizyWytrzymalosciowe.webp" data-lightbox="galery">
+                    <img src="/galery/analizyWytrzymalosciowe.webp" alt="zdjęcie analiz wytrzymałościowych" class="">
+                </a>
+                <a href="/galery/modelowanie3d.webp" data-lightbox="galery" disa>
+                    <img src="/galery/modelowanie3d.webp" alt="zdjęcie modelowania 3d" class="">
+                </a>
+             </div>
+         </div>
+
+        
 
         <!-- Contact -->
-        <div class="items-center text-center pt-10 w-full" id="contact">
+        <div class="items-center text-center mb-20" id="contact">
             <h1 class="text-5xl font-bold py-4">SKONTAKTUJ SIĘ ZE MNĄ</h1>
-            <h3 class="text-lg font-bold pt-2 uppercase">Zapraszam do kontaktu!</h3>
+            <h3 class="text-xs font-bold pt-2 uppercase">Zapraszam do kontaktu!</h3>
         </div>
         
-        <div class="flex justify-center items-center mt-20 mb-20">
+        <div class="flex justify-center items-center mt-20 mb-44">
             <div class="max-w-screen-lg mx-auto p-4 space-y-4 text-neutral-900">
-                <div class="flex items-center space-x-4">
+                <div class="flex items-center space-x-8 lg:ml-10">
                     <div class="w-8 h-8 flex items-center justify-center">
                         <i class="fas fa-phone text-neutral-900"></i>
                     </div>
-                    <p>Telefon: 123-456-789</p>
+                    <p>Telefon: 697-693-936</p>
                 </div>
                 
-                <div class="flex items-center space-x-4">
+                <div class="flex items-center space-x-8 lg:ml-10">
                     <div class="w-8 h-8 flex items-center justify-center">
                         <i class="fas fa-envelope text-neutral-900"></i>
                     </div>
-                    <p>Email: info@example.com</p>
+                    <p>Email: adrian.1991.wisniewski@gmail.com</p>
                 </div>
                 
-                <div class="flex items-center space-x-4">
+                <div class="flex items-center space-x-8 lg:ml-10">
                     <div class="w-8 h-8 flex items-center justify-center">
                         <i class="fas fa-map-marker-alt text-neutral-900"></i>
                     </div>
-                    <p>Adres: 123 Main St, City, Country</p>
+                    <p>Adres: 3 Maja 19A, 62-400 Słupca</p>
                 </div>
         
-                <div class="flex items-center space-x-4">
+                <div class="flex items-center space-x-8 lg:ml-10">
                     <div class="w-8 h-8 flex items-center justify-center">
                         <i class="fas fa-id-card text-neutral-900"></i>
                     </div>
-                    <p>NIP: 123-456-7890</p>
+                    <p>NIP: 6671746617</p>
                 </div>
         
-                <div class="flex items-center space-x-4">
+                <div class="flex items-center space-x-8 lg:ml-10">
                     <div class="w-8 h-8 flex items-center justify-center">
                         <i class="fas fa-list-alt text-neutral-900"></i>
                     </div>
-                    <p>REGON: 123456789</p>
+                    <p>REGON: 383186410</p>
                 </div>
             </div>
         </div>
         
     </main>
+
+
+    <!-- Footer section -->
 
     <footer class="flex h-20 w-full text-white text-center justify-between items-center bg-gray-900 px-5">
         <p class="text-sm">&copy 2023 AWBK, All Rights Reserved. | Design: <a href="#top">mKujawaDev.pl</a></p>  
@@ -246,25 +229,25 @@
 
 
 
-    <script src="https://kit.fontawesome.com/3fd4863eda.js" crossorigin="anonymous"></script>
-    <script>
-        const mobileMenuButton = document.getElementById('mobileMenuButton');
-        const mobileMenu = document.getElementById('mobileMenu');
-        const closeMobileMenuButton = document.getElementById('closeMobileMenu');
-        const mobileLink = document.getElementById('mobileLink');
+    <!-- Script tag's -->
 
-        mobileMenuButton.addEventListener('click', () => {
-            mobileMenu.classList.toggle('open-menu');
-        });
+        <!-- Font Awesome Script -->
+        <script src="https://kit.fontawesome.com/3fd4863eda.js" crossorigin="anonymous"></script>
+        
+        <!-- LightBox Script -->
+        <script src="/lightbox/js/lightbox.js"></script>
+        <script src="/lightbox/js/lightbox-plus-jquery.js"></script>
+        <script>
+            lightbox.option({
+              'resizeDuration': 200,
+              'wrapAround': true,
+              'disableScrolling': true,
+              'alwaysShowNavOnTouchDevices': true,
+              'fitImagesInViewport': true,
+            })
+        </script>
 
-        closeMobileMenuButton.addEventListener('click', () => {
-            mobileMenu.classList.remove('open-menu');
-        });
-
-        mobileLink.addEventListener('click', () => {
-            mobileMenu.classList.remove('open-menu');
-        });
-
-    </script>
+        <!-- Custom JS Script -->
+        <script src="/js/script.js"></script>
 </body>
 </html>
