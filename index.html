@@ -82,10 +82,9 @@
         <!-- Title -->
         <div class="h-screen flex items-center justify-center pb-20 text-neutral-900">
             <div class="text-center justify-center">
-                <h2 class="text-2xl font-bold mb-2">Slogan firmy</h2>
                 <h1 class="text-6xl font-bold mb-2">Witamy na AWBK</h1>
                 <a href="#aboutMe">
-                    <button class="btn border-2 border-gray-900 py-3 px-8 text-sm text-bold font-bold mt-5 mb-5 transition ease-in-out hover:bg-yellow-300 duration-300">Przejdź dalej</button>
+                    <button class="btn border-2 border-gray-900 py-3 px-8 text-sm text-bold font-bold mt-10 mb-5 transition ease-in-out hover:bg-yellow-300 duration-300">Przejdź dalej</button>
                 </a>
             </div>
         </div>
@@ -103,29 +102,35 @@
         <!-- My skills -->
         <div class="mt-16 mb-72" id="mySkills">
             <div class="max-w-screen-lg mx-auto p-4 space-y-4 md:flex md:space-y-0 md:space-x-4">
-                <div class="shadow-lg rounded-lg w-full md:w-1/2 p-4 flex flex-col items-center bg-gray-100 border-2 border-neutral-950 ">
+                <div class="shadow-lg rounded-lg w-full md:w-1/2 p-4 flex flex-col items-center bg-white border-2 border-neutral-950 ">
                     <div class="flex items-center justify-center w-12 h-12 bg-yellow-400 rounded-full mb-2">
                         <i class="fa-solid fa-pen text-white p-4"></i>
                     </div>
                     <div class="md:flex-grow text-center">
                         <h1 class="text-xl font-bold mt-2">Projektowanie</h1>
-                        <div class="text-neutral-900 mt-10">Opis projektowania, realizacji itd</div>
+                        <div class="text-neutral-900 mt-10">
+                            <p class="text-left pl-4">
+                                Wykonanie projektu konstrukcji lub maszyny dostosowanych do potrzeb indywidualnych oraz zastosowań specjalnych z uwzględnieniem funkcjonalności oraz obowiązujących przepisów i norm. Wykonanie wizualizacji projektu.
+                            </p>
+                        </div>
                     </div>
                 </div>
 
-                <div class="shadow-lg rounded-lg w-full md:w-1/2 p-4 flex flex-col items-center bg-gray-100 border-2 border-neutral-950 ">
+                <div class="shadow-lg rounded-lg w-full md:w-1/2 p-4 flex flex-col items-center bg-white border-2 border-neutral-950 ">
                     <div class="flex items-center justify-center w-12 h-12 bg-yellow-400 rounded-full mb-2">
                         <i class="fa-regular fa-pen-to-square text-white p-4"></i>
                     </div>
                     <div class="md:flex-grow text-center">
                         <h1 class="text-xl font-bold mt-2">Analiza i wkonanie dokumentacji</h1>
                         <div class="text-neutral-900 mt-3">
-                            <p>Opis przedstawiający na czym polega proces analizy i wykonania dokumentacji lub coś innego.</p>
+                            <p class="text-left pl-4">
+                                Przygotowanie dokumentacji produkcyjnej oraz montażowej zoptymalizowanej pod kątem indywidualnych możliwości produkcyjno-technologicznych, optymalizacja wykorzystania materiału. Analiza wytrzymałościowa statyczna, dynamiczna oraz funkcjonalna z pomocą metod MES oraz oprogramowania 3D.
+                            </p>
                         </div>
                     </div>
                 </div>
 
-                <div class="shadow-lg rounded-lg w-full md:w-1/2 p-4 flex flex-col items-center bg-gray-100 border-2 border-neutral-950 ">
+                <div class="shadow-lg rounded-lg w-full md:w-1/2 p-4 flex flex-col items-center bg-white border-2 border-neutral-950 ">
                     <div class="flex items-center justify-center w-12 h-12 bg-yellow-400 rounded-full mb-2">
                         <i class="fa-solid fa-list-check text-white p-4"></i>
                     </div>
@@ -151,20 +156,49 @@
             <h1 class="text-6xl font-bold py-4" >MOJE PROJEKTY</h1>
             <h3 class="text-xs font-bold pt-2 uppercase">Poniższe zdjęcia przedstawiają niektóre z moich projektów</h3>
 
-            <div class="w-full flex justify-center space-x-4 mt-20 md\:flex-col">
-                <a href="galery/dokumentacja2d.webp" data-lightbox="galery">
-                    <img src="/galery/dokumentacja2d.webp" alt="zdjęcie dokumentacji 2d" class="">
-                </a>
-                <a href="/galery/analizyWytrzymalosciowe.webp" data-lightbox="galery">
-                    <img src="/galery/analizyWytrzymalosciowe.webp" alt="zdjęcie analiz wytrzymałościowych" class="">
-                </a>
-                <a href="/galery/modelowanie3d.webp" data-lightbox="galery" disa>
-                    <img src="/galery/modelowanie3d.webp" alt="zdjęcie modelowania 3d" class="">
-                </a>
-             </div>
+         <div class="flex mx-auto justify-center items-center mt-24">
+            <div class="grid grid-cols-3 md:grid-cols-2 gap-5 w-1/2 p-4 space-y-5">
+                <div>
+                    <a href="galery/1.jpg" data-lightbox="galery" class="block shadow-lg h-auto max-w-full rounded-sm hover:shadow-2xl hover:border-gray-900 border-2 border-transparent transform
+                    transition hover:scale-105 duration-300">
+                        <img src="/galery/1.jpg" alt="zdjęcie dokumentacji 2d" >
+                    </a>
+                </div>
+                <div>
+                    <a href="galery/2.jpg" data-lightbox="galery" class="block shadow-lg h-auto max-w-full rounded-sm hover:shadow-2xl hover:border-gray-900 border-2 border-transparent transform
+                    transition hover:scale-105 duration-300">
+                        <img src="/galery/2.jpg" alt="zdjęcie dokumentacji 2d" >
+                    </a>
+                </div>
+                <div>
+                    <a href="galery/5.jpg" data-lightbox="galery" class="block shadow-lg h-auto max-w-full rounded-sm hover:shadow-2xl hover:border-gray-900 border-2 border-transparent transform
+                    transition hover:scale-105 duration-300">
+                        <img src="/galery/5.jpg" alt="zdjęcie dokumentacji 2d" >
+                    </a>
+                </div>
+                <div>
+                    <a href="galery/4.jpg" data-lightbox="galery" class="block shadow-lg h-auto max-w-full rounded-sm hover:shadow-2xl hover:border-gray-900 border-2 border-transparent transform
+                    transition hover:scale-105 duration-300">
+                        <img src="/galery/4.jpg" alt="zdjęcie dokumentacji 2d" >
+                    </a>
+                </div>
+                <div>
+                    <a href="galery/3.jpg" data-lightbox="galery" class="block shadow-lg h-auto max-w-full rounded-sm hover:shadow-2xl hover:border-gray-900 border-2 border-transparent transform
+                    transition hover:scale-105 duration-300">
+                        <img src="/galery/3.jpg" alt="zdjęcie dokumentacji 2d" >
+                    </a>
+                </div>
+                <div>
+                    <a href="galery/6.jpg" data-lightbox="galery" class="block shadow-lg h-auto max-w-full rounded-sm hover:shadow-2xl hover:border-gray-900 border-2 border-transparent transform
+                    transition hover:scale-105 duration-300">
+                        <img src="/galery/6.jpg" alt="zdjęcie dokumentacji 2d" >
+                    </a>
+                </div>
+            </div>
          </div>
 
-        
+    
+        </div>
 
         <!-- Contact -->
         <div class="items-center text-center mb-20" id="contact">
