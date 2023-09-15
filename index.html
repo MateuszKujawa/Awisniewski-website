@@ -38,7 +38,7 @@
 
 
 
-<body class="font-primary" id="top">
+<body class="font-primary bg-gray-50 " id="top">
 
     <!-- Navigation bar -->
     <nav id="navbar" class="p-4 flex justify-between items-center sticky-nav">
@@ -87,10 +87,18 @@
                 </button>
 
                 <ul class="mt-52 text-2xl">
-                    <a href="index.html" class="block px-4 py-4 text-neutral-900 font-semibold border-b-2 hover:text-yellow-300 hover:border-yellow-300 duration-300 active:text-yellow-300" onclick="closeMenu()">Strona główna</a>
-                    <a href="#aboutMe" class="block px-4 py-4 text-neutral-900 font-semibold border-b-2 hover:text-yellow-300 hover:border-yellow-300 duration-300 active:text-yellow-300" onclick="closeMenu()">O mnie</a>
-                    <a href="#projects" class="block px-4 py-4 text-neutral-900 font-semibold border-b-2 hover:text-yellow-300 hover:border-yellow-300 duration-300 active:text-yellow-300" onclick="closeMenu()">Projekty</a>
-                    <a href="#contact" class="block px-4 py-4 text-neutral-900 font-semibold border-b-2 hover:text-yellow-300 hover:border-yellow-300 duration-300 active:text-yellow-300" onclick="closeMenu()">Kontakt</a>
+                    <li>
+                        <a href="index.html" class="block px-4 py-4 text-neutral-900 font-semibold border-b-2 hover:text-yellow-300 hover:border-yellow-300 duration-300 active:text-yellow-300" onclick="closeMenu()">Strona główna</a>
+                    </li>
+                    <li>
+                        <a href="#aboutMe" class="block px-4 py-4 text-neutral-900 font-semibold border-b-2 hover:text-yellow-300 hover:border-yellow-300 duration-300 active:text-yellow-300" onclick="closeMenu()">O mnie</a>
+                    </li>
+                    <li>
+                        <a href="#projects" class="block px-4 py-4 text-neutral-900 font-semibold border-b-2 hover:text-yellow-300 hover:border-yellow-300 duration-300 active:text-yellow-300" onclick="closeMenu()">Projekty</a>
+                    </li>
+                    <li>
+                        <a href="#contact" class="block px-4 py-4 text-neutral-900 font-semibold border-b-2 hover:text-yellow-300 hover:border-yellow-300 duration-300 active:text-yellow-300" onclick="closeMenu()">Kontakt</a>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -120,7 +128,7 @@
         </div>
 
         <!-- My skills -->
-        <div class="mt-16 mb-72" id="mySkills">
+        <div class="mt-16 mb-20" id="mySkills">
             <div class="max-w-screen-lg mx-auto p-4 space-y-4 md:flex md:space-y-0 md:space-x-4">
                 <div class="shadow-lg rounded-lg w-full md:w-1/2 p-4 flex flex-col items-center bg-white border-2 border-neutral-950 ">
                     <div class="flex items-center justify-center w-12 h-12 bg-yellow-400 rounded-full mb-2">
@@ -171,46 +179,46 @@
 
          <!-- My Project's -->
 
-         <div id="projects" class="h-28"></div>
-         <div class="items-center text-center mb-72">
+         <div id="projects" class="h-20"></div>
+         <div class="items-center text-center mb-24">
             <h1 class="text-6xl font-bold py-4" >MOJE PROJEKTY</h1>
             <h3 class="text-xs font-bold pt-2 uppercase">Poniższe zdjęcia przedstawiają niektóre z moich projektów</h3>
 
          <div class="flex mx-auto justify-center items-center mt-24">
-            <div class="grid grid-cols-3 md:grid-cols-2 gap-5 w-1/2 p-4 space-y-5">
+            <div class="grid xl:grid-cols-2 xl:w-9/12 md:grid-cols-2 md:w-4/5  sm:grid-cols-1 sm:w-4/5 gap-6 p-6 space-y-5">
                 <div>
-                    <a href="galery/1.jpg" data-lightbox="galery" class="block shadow-lg h-auto max-w-full rounded-sm hover:shadow-2xl hover:border-gray-900 border-2 border-transparent transform
-                    transition hover:scale-105 duration-300">
-                        <img src="/galery/1.jpg" alt="zdjęcie dokumentacji 2d" >
+                    <a href="galery/1.jpg" data-lightbox="galery" class="block shadow-lg h-auto max-w-full rounded-sm hover:shadow-2xl hover:border-gray-900 border-2 border-transparent opacity-50 hover:opacity-100 transform
+                    transition hover:scale-95 duration-300 mt-5">
+                        <img src="/galery/1.jpg" alt="zdjęcie dokumentacji 2d">
                     </a>
                 </div>
                 <div>
-                    <a href="galery/2.jpg" data-lightbox="galery" class="block shadow-lg h-auto max-w-full rounded-sm hover:shadow-2xl hover:border-gray-900 border-2 border-transparent transform
-                    transition hover:scale-105 duration-300">
+                    <a href="galery/2.jpg" data-lightbox="galery" class="block shadow-lg h-auto max-w-full rounded-sm hover:shadow-2xl hover:border-gray-900 border-2 border-transparent opacity-50 hover:opacity-100 transform
+                    transition hover:scale-95 duration-300">
                         <img src="/galery/2.jpg" alt="zdjęcie dokumentacji 2d" >
                     </a>
                 </div>
                 <div>
-                    <a href="galery/5.jpg" data-lightbox="galery" class="block shadow-lg h-auto max-w-full rounded-sm hover:shadow-2xl hover:border-gray-900 border-2 border-transparent transform
-                    transition hover:scale-105 duration-300">
+                    <a href="galery/5.jpg" data-lightbox="galery" class="block shadow-lg h-auto max-w-full rounded-sm hover:shadow-2xl hover:border-gray-900 border-2 border-transparent opacity-50 hover:opacity-100 transform
+                    transition hover:scale-95 duration-300">
                         <img src="/galery/5.jpg" alt="zdjęcie dokumentacji 2d" >
                     </a>
                 </div>
                 <div>
-                    <a href="galery/4.jpg" data-lightbox="galery" class="block shadow-lg h-auto max-w-full rounded-sm hover:shadow-2xl hover:border-gray-900 border-2 border-transparent transform
-                    transition hover:scale-105 duration-300">
+                    <a href="galery/4.jpg" data-lightbox="galery" class="block shadow-lg h-auto max-w-full rounded-sm hover:shadow-2xl hover:border-gray-900 border-2 border-transparent opacity-50 hover:opacity-100 transform
+                    transition hover:scale-95 duration-300">
                         <img src="/galery/4.jpg" alt="zdjęcie dokumentacji 2d" >
                     </a>
                 </div>
                 <div>
-                    <a href="galery/3.jpg" data-lightbox="galery" class="block shadow-lg h-auto max-w-full rounded-sm hover:shadow-2xl hover:border-gray-900 border-2 border-transparent transform
-                    transition hover:scale-105 duration-300">
+                    <a href="galery/3.jpg" data-lightbox="galery" class="block shadow-lg h-auto max-w-full rounded-sm hover:shadow-2xl hover:border-gray-900 border-2 border-transparent opacity-50 hover:opacity-100 transform
+                    transition hover:scale-95 duration-300">
                         <img src="/galery/3.jpg" alt="zdjęcie dokumentacji 2d" >
                     </a>
                 </div>
                 <div>
-                    <a href="galery/6.jpg" data-lightbox="galery" class="block shadow-lg h-auto max-w-full rounded-sm hover:shadow-2xl hover:border-gray-900 border-2 border-transparent transform
-                    transition hover:scale-105 duration-300">
+                    <a href="galery/6.jpg" data-lightbox="galery" class="block shadow-lg h-auto max-w-full rounded-sm hover:shadow-2xl hover:border-gray-900 border-2 border-transparent opacity-50 hover:opacity-100 transform
+                    transition hover:scale-95 duration-300">
                         <img src="/galery/6.jpg" alt="zdjęcie dokumentacji 2d" >
                     </a>
                 </div>
