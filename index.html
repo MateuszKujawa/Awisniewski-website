@@ -40,6 +40,7 @@
 
 
 <body class="font-primary bg-gray-50 " id="top">
+    <!-- Loader -->
     <div class="loader" id="loader">
         <div class="loader-content">
             
@@ -73,9 +74,6 @@
             </ul>
         </div>
 
-
-        
-
         <!-- Mobile navbar -->
         <div class="md:hidden relative">
             <button id="mobileMenuButton" class="text-neutral-900">
@@ -105,6 +103,7 @@
                         <a href="#contact" class="block px-4 py-4 text-neutral-900 font-semibold border-b-2 hover:text-yellow-300 hover:border-yellow-300 duration-300 active:text-yellow-300" onclick="closeMenu()">Kontakt</a>
                     </li>
                 </ul>
+
             </div>
         </div>
     </nav>
@@ -117,24 +116,26 @@
             <div class="text-center justify-center">
                 <h1 class="text-6xl font-bold mb-2">Witamy na AWBK</h1>
                 <a href="#aboutMe">
-                    <button class="btn border-2 border-gray-900 py-3 px-8 text-sm text-bold font-bold mt-10 mb-5 transition ease-in-out hover:bg-yellow-300 duration-300">Przejdź dalej</button>
+                    <button class="btn border-2 border-gray-900 py-3 px-8 text-sm text-bold font-bold mt-10 mb-5 transition ease-in-out hover:bg-yellow-300 duration-300" name="Przejdź dalej">Przejdź dalej</button>
                 </a>
             </div>
         </div>
+
     </header>
 
 
     <!-- Main section -->
-    <main class="bg-gray-50 text-neutral-900 justify-center items-center ">
+    <main class="bg-gray-50 text-neutral-900 justify-center items-center">
         <!-- About me -->
         <div class="items-center text-center pt-28" id="aboutMe">
             <h1 class="text-6xl font-bold">O MNIE</h1>
-            <h3 class="text-xs font-bold pt-5">CZYM SIĘ ZAJMUJĘ</h3>
+            <p class="text-xs font-bold pt-5">CZYM SIĘ ZAJMUJĘ</p>
         </div>
 
         <!-- My skills -->
         <div class="mt-16 mb-20" id="mySkills">
             <div class="max-w-screen-lg mx-auto p-4 space-y-4 md:flex md:space-y-0 md:space-x-4">
+
                 <div class="shadow-lg rounded-lg w-full md:w-1/2 p-4 flex flex-col items-center bg-white border-2 border-neutral-950 ">
                     <div class="flex items-center justify-center w-12 h-12 bg-yellow-400 rounded-full mb-2">
                         <i class="fa-solid fa-pen text-white p-4"></i>
@@ -170,11 +171,13 @@
                     <div class="md:flex-grow text-center">
                         <h1 class="text-xl font-bold mt-2">Wykonawstwo</h1>
                         <div class="text-neutral-900 mt-8 text-left list-none">
-                            <li class="p-2">- Maszyn przemysłowych oraz rolniczych.</li>
-                            <li class="p-2">- Konstrukcji stalowych oraz drewnianych.</li>
-                            <li class="p-2">- Zabudów specjalnych pojazdów.</li>
-                            <li class="p-2">- Mebli.</li>
-                            <li class="p-2">- Spawanie stali nierdzewnych oraz aluminium.</li>
+                            <ul>
+                                <li class="p-2">- Maszyn przemysłowych oraz rolniczych.</li>
+                                <li class="p-2">- Konstrukcji stalowych oraz drewnianych.</li>
+                                <li class="p-2">- Zabudów specjalnych pojazdów.</li>
+                                <li class="p-2">- Mebli.</li>
+                                <li class="p-2">- Spawanie stali nierdzewnych oraz aluminium.</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -185,46 +188,47 @@
          <!-- My Project's -->
 
          <div id="projects" class="h-20"></div>
+
          <div class="items-center text-center mb-24">
             <h1 class="text-6xl font-bold py-4" >MOJE PROJEKTY</h1>
-            <h3 class="text-xs font-bold pt-2 uppercase">Poniższe zdjęcia przedstawiają niektóre z moich projektów</h3>
+            <p class="text-xs font-bold pt-2 uppercase">Poniższe zdjęcia przedstawiają niektóre z moich projektów</p>
 
          <div class="flex mx-auto justify-center items-center mt-24">
             <div class="grid xl:grid-cols-2 xl:w-9/12 md:grid-cols-2 md:w-4/5  sm:grid-cols-1 sm:w-4/5 gap-6 p-6 space-y-5">
                 <div>
                     <a href="galery/1.webp" data-lightbox="galery" class="block shadow-lg h-auto max-w-full rounded-sm hover:shadow-2xl hover:border-gray-900 border-2 border-transparent opacity-50 hover:opacity-100 transform
                     transition hover:scale-95 duration-300 mt-5">
-                        <img src="/galery/1.webp" alt="zdjęcie dokumentacji 2d">
+                        <img src="/galery/1.webp" alt="zdjęcie projektu 3D">
                     </a>
                 </div>
                 <div>
                     <a href="galery/2.webp" data-lightbox="galery" class="block shadow-lg h-auto max-w-full rounded-sm hover:shadow-2xl hover:border-gray-900 border-2 border-transparent opacity-50 hover:opacity-100 transform
                     transition hover:scale-95 duration-300">
-                        <img src="/galery/2.webp" alt="zdjęcie dokumentacji 2d" >
+                        <img src="/galery/2.webp" alt="zdjęcie projektu 3D">
                     </a>
                 </div>
                 <div>
                     <a href="galery/5.webp" data-lightbox="galery" class="block shadow-lg h-auto max-w-full rounded-sm hover:shadow-2xl hover:border-gray-900 border-2 border-transparent opacity-50 hover:opacity-100 transform
                     transition hover:scale-95 duration-300">
-                        <img src="/galery/5.webp" alt="zdjęcie dokumentacji 2d" >
+                        <img src="/galery/5.webp" alt="zdjęcie projektu 3D">
                     </a>
                 </div>
                 <div>
                     <a href="galery/4.webp" data-lightbox="galery" class="block shadow-lg h-auto max-w-full rounded-sm hover:shadow-2xl hover:border-gray-900 border-2 border-transparent opacity-50 hover:opacity-100 transform
                     transition hover:scale-95 duration-300">
-                        <img src="/galery/4.webp" alt="zdjęcie dokumentacji 2d" >
+                        <img src="/galery/4.webp" alt="zdjęcie projektu 3D">
                     </a>
                 </div>
                 <div>
                     <a href="galery/3.webp" data-lightbox="galery" class="block shadow-lg h-auto max-w-full rounded-sm hover:shadow-2xl hover:border-gray-900 border-2 border-transparent opacity-50 hover:opacity-100 transform
                     transition hover:scale-95 duration-300">
-                        <img src="/galery/3.webp" alt="zdjęcie dokumentacji 2d" >
+                        <img src="/galery/3.webp" alt="zdjęcie projektu 3D">
                     </a>
                 </div>
                 <div>
                     <a href="galery/6.webp" data-lightbox="galery" class="block shadow-lg h-auto max-w-full rounded-sm hover:shadow-2xl hover:border-gray-900 border-2 border-transparent opacity-50 hover:opacity-100 transform
                     transition hover:scale-95 duration-300">
-                        <img src="/galery/6.webp" alt="zdjęcie dokumentacji 2d" >
+                        <img src="/galery/6.webp" alt="zdjęcie projektu 3D">
                     </a>
                 </div>
             </div>
@@ -237,7 +241,7 @@
         <div class="contact pt-20 pb-20">
             <div class="items-center text-center mb-20" id="contact">
                 <h1 class="text-5xl font-bold py-4">SKONTAKTUJ SIĘ ZE MNĄ</h1>
-                <h3 class="text-xs font-bold pt-2 uppercase">Zapraszam do kontaktu!</h3>
+                <p class="text-xs font-bold pt-2 uppercase">Zapraszam do kontaktu!</p>
             </div>
             
             <div class="flex justify-center items-center">
