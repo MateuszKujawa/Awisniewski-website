@@ -18,23 +18,19 @@ const navbar = document.getElementById('navbar');
 
 // Mobile menu
 
-const mobileMenuButton = document.getElementById('mobileMenuButton');
-const mobileMenu = document.getElementById('mobileMenu');
-const closeMobileMenuButton = document.getElementById('closeMobileMenu');
+    const mobileMenuButton = document.getElementById("mobileMenuButton");
+    const closeMobileMenuButton = document.getElementById("closeMobileMenuButton");
+    const nav = document.querySelector("nav");
 
-mobileMenuButton.addEventListener('click', () => {
-    mobileMenu.classList.toggle('open-menu');
-    document.body.classList.add('lockScroll');
-});
+    mobileMenuButton.addEventListener("click", () => {
+      nav.classList.toggle("hidden");
+      mobileMenuButton.classList.add("hidden");
+      closeMobileMenuButton.classList.remove("hidden");
+    });
 
-closeMobileMenuButton.addEventListener('click', () => {
-    mobileMenu.classList.remove('open-menu');
-    document.body.classList.remove('lockScroll');
-});
-
-
-function closeMenu() {
-    mobileMenu.classList.toggle('open-menu');
-    document.body.classList.toggle('lockScroll');
-}
+    closeMobileMenuButton.addEventListener("click", () => {
+      nav.classList.toggle("hidden");
+      mobileMenuButton.classList.remove("hidden");
+      closeMobileMenuButton.classList.add("hidden");
+    });
 
